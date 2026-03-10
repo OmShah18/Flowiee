@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>flowiee — Everything flows from here.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#18442a",
+                        "muted-sage": "#45644a",
+                        "warm-parchment": "#e4dbc4",
+                        "soft-off-white": "#f3ede3",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#141e18",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            border: 1px solid rgba(24, 68, 42, 0.1);
+        }
+        .liquid-flow-bg {
+            background: radial-gradient(circle at 50% 50%, #f3ede3 0%, #e4dbc4 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .liquid-blob {
+            position: absolute;
+            filter: blur(60px);
+            opacity: 0.4;
+            z-index: 0;
+            border-radius: 50%;
+        }
+        .apple-glass-button {
+            background: linear-gradient(180deg, rgba(24, 68, 42, 0.9) 0%, rgba(24, 68, 42, 1) 100%);
+            box-shadow: 0 4px 15px rgba(24, 68, 42, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .apple-glass-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(24, 68, 42, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Sticky Pill Header -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[800px]">
+<div class="liquid-glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+<div class="flex items-center gap-2">
+<div class="text-primary dark:text-soft-off-white">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-lg font-bold tracking-tight text-primary">flowiee</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-primary/80 hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-medium text-primary/80 hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium text-primary/80 hover:text-primary transition-colors" href="#">Process</a>
+<a class="text-sm font-medium text-primary/80 hover:text-primary transition-colors" href="#">About</a>
+</div>
+<button class="apple-glass-button text-white text-xs font-bold px-5 py-2 rounded-full uppercase tracking-wider">
+                Start Project
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden liquid-flow-bg">
+<!-- Abstract Liquid Blobs -->
+<div class="liquid-blob bg-primary w-[500px] h-[500px] -top-20 -left-20"></div>
+<div class="liquid-blob bg-muted-sage w-[400px] h-[400px] top-1/2 -right-20"></div>
+<div class="liquid-blob bg-warm-parchment w-[600px] h-[600px] -bottom-40 left-1/3"></div>
+<div class="relative z-10 container mx-auto px-6 text-center">
+<div class="inline-flex items-center gap-2 bg-primary/5 border border-primary/10 rounded-full px-4 py-1.5 mb-8">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary/70">Now booking for Q4</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-extrabold text-primary tracking-tighter leading-[0.9] mb-6">
+                Everything flows <br/> <span class="text-muted-sage italic font-light">from here.</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-muted-sage mb-10 leading-relaxed font-medium">
+                Sophisticated design and high-performance development <br class="hidden md:block"/> for brands moving at the speed of the tech-forward era.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="apple-glass-button group flex items-center gap-3 text-white px-8 py-4 rounded-full text-lg font-bold transition-all w-full sm:w-auto">
+                    Get Started
+                    <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="liquid-glass hover:bg-white/60 text-primary border border-primary/10 px-8 py-4 rounded-full text-lg font-bold transition-all w-full sm:w-auto">
+                    View Our Work
+                </button>
+</div>
+<!-- Trust Bar -->
+<div class="mt-24 pt-12 border-t border-primary/5 max-w-4xl mx-auto">
+<p class="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/40 mb-8">Trusted by visionary founders</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<img class="h-6" data-alt="Corporate partner logo minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_8RUDr-cIah4K-_EOC2cSvT_GJS60g78Skvkh77avGW-u37Os1cqyXRpkPBuF64dKEh6MMO-Y4vTT7iPhiM-G5eAe72AFklXOd3o8BC5hi054noroYCXGLrc-SzWdRS1T-qG8FgICsOTUrUEr8rtulf2JlAJ1khScAx-92--iQ0yg9YfiM4HwZa3ZC7627LkKRQl2UEdn0bzG5A6jiejVfuHht--nggW4qF3BdgOGezPTOHjhQJswVwoq6E0ownndJBADt-aPZU"/>
+<img class="h-6" data-alt="Tech startup logo simple vector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8_-Z0gl5OySjdW9jznFcewlR45bRetJpPWBz7mRKMxyDbVDksXYqZBcw2DQjy_lsuG4aTLesl4YomuiTFSlBReywptpDdgyL7Mgu6zfAqbhtUWZuKVf_AbU8Ciib40-wCYgG22sju2rPAg1DkZk2EBfzjeVWG90eFLKoo8PrGc4xDshFNclrZpjobfDxqaZHVtGGkt5_UfC9ZjbgFfhqo_9G6_LTVrZhQxivaUxdV4a7ytnRAbt8B4PXyTq8WY2VkCoZc_jxyE1Y"/>
+<img class="h-6" data-alt="Modern brand logo clean typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY_-nCly4PnQbFQ315PnQXR5oP36k3G3AHxzKf7YlZdupb_0gor9v1Hv2Ak2TtJmEbwAWdn1muveMp7AFm_zikcuyug1U8iQSN7IjwboYIa0vNWI83Hm5iMY5vwF2EY5n6rB-4i3xVHhkgswGjSqgnu3NU-b0ezLoI3ZgrLEfUMWMcsfPFeOY5eU_zyZaLjl-SG8-wGhXLEhptmvrfRLU4H9RkhQ5uQpI7rueScCcNnVU61s2R8OFC-qSgFGFADUVUPYdHY7YYyqY"/>
+<img class="h-6" data-alt="Venture capital logo professional icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA00D97X5qqUdzdb5JxvxW4sxrcY6j_9I78yMMb6RTXDpTRvllkOZLkKOH9EgFXxWtKBBqgQvkQKyoSdX32JskCSNIROKnrsFW-CU8AljmUB45dSTJKjXW2Jx1dAGu83LYa24gJRuVw7_NZ3VKoAwATV-I-7UepAMMGm74Yn9ShG3lCp5OdjVwD0P56SmIw_syqAgOqwdXeVaZp_xRcyqrHOj6DQTX2wDqHIRorDbV2cugc6o1gd4OvR-Ke4_8a2gAjdX8ltanLzFk"/>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Elements -->
+<div class="absolute bottom-10 left-10 hidden lg:block">
+<div class="liquid-glass p-4 rounded-2xl flex items-center gap-4 shadow-xl border border-white/40">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-primary/50 uppercase tracking-wider">Premium Fluidity</p>
+<p class="text-sm font-bold text-primary">High-End Interactive UX</p>
+</div>
+</div>
+</div>
+<div class="absolute top-1/4 right-20 hidden lg:block">
+<div class="size-24 rounded-full liquid-glass flex items-center justify-center border border-white/50 animate-bounce duration-[4000ms]">
+<span class="material-symbols-outlined text-3xl text-primary/30">water_drop</span>
+</div>
+</div>
+</main>
+<!-- Services Quick Grid -->
+<section class="bg-soft-off-white dark:bg-background-dark py-24">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group p-8 rounded-3xl bg-white/50 dark:bg-primary/5 border border-primary/5 hover:bg-primary hover:text-white transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-white/20">
+<span class="material-symbols-outlined text-primary group-hover:text-white">palette</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Digital Design</h3>
+<p class="text-muted-sage group-hover:text-white/80 leading-relaxed">
+                        We create interfaces that don't just look beautiful, they feel like they were made for your hands.
+                    </p>
+</div>
+<div class="group p-8 rounded-3xl bg-white/50 dark:bg-primary/5 border border-primary/5 hover:bg-primary hover:text-white transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-white/20">
+<span class="material-symbols-outlined text-primary group-hover:text-white">code</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Web Development</h3>
+<p class="text-muted-sage group-hover:text-white/80 leading-relaxed">
+                        Robust, scalable, and lightning-fast digital products built with the most modern tech stacks.
+                    </p>
+</div>
+<div class="group p-8 rounded-3xl bg-white/50 dark:bg-primary/5 border border-primary/5 hover:bg-primary hover:text-white transition-all duration-500">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-white/20">
+<span class="material-symbols-outlined text-primary group-hover:text-white">wind_power</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Brand Strategy</h3>
+<p class="text-muted-sage group-hover:text-white/80 leading-relaxed">
+                        Defining your flow and unique position in a crowded, noisy market through deep strategic insights.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Preview Grid -->
+<section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Selected Stories</h2>
+<p class="text-muted-sage max-w-lg font-medium">A look at the fluid experiences we've built for industry leaders.</p>
+</div>
+<a class="group flex items-center gap-2 font-bold text-primary" href="#">
+                    See all projects
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] rounded-3xl overflow-hidden mb-6">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/0 transition-all duration-700 z-10"></div>
+<img class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="Abstract liquid interface design preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7HuUlAQc1-86xFlyK9w61uYUc69SqYlF3GwnStH-yfsbsqEwnPWsJ8L1eRaBI3fghVOaAVDvkToyoEiSer3YVk0yGttm97SHZpeuurJGTMhPZfL1r_g7RLx5W29R704PXbXYroptNN7p5pRN4Vdki_gKsZI2rPRlpgL68igeaq8ykaqGwOTQvqegol8vVM3CTnPpkThW47xM8iJydGWnKlcdaPwiA_fFz8Pikq15Dbl8WuVvvwYwMr0xyeH8XhWD5URJpx8JUrEY"/>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="px-4 py-1.5 rounded-full liquid-glass text-xs font-bold uppercase tracking-widest">Case Study</span>
+</div>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-1">Liquid Glass Interface</h4>
+<p class="text-muted-sage">Web Design • 2024</p>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] rounded-3xl overflow-hidden mb-6">
+<div class="absolute inset-0 bg-muted-sage/20 group-hover:bg-muted-sage/0 transition-all duration-700 z-10"></div>
+<img class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="Modern tech branding with soft gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxxY3g3kGQi_y4-BOlmTjUPTioNpAvK5zScSXKk14t-bT914pQNFf_lfm9HhuN0SlV28t7UyhR5_0aDYLGSfk-0S60tz9j0cbbQUUpSXfY5HYBxpLjhpYB_gOHj9W1OonuHGErCGFi_fiveQX-a2sRDsMFhds3bPH1K7Zt3BlH2jWRlqnNwzGG7CCYLoQ46QTtG7su88_OvG1LKiGL_wpLW7vmaXq9Ml4KzSklm3rd8_p848_HNOf89Sjdyx-VifkcoNvkeRY62A"/>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="px-4 py-1.5 rounded-full liquid-glass text-xs font-bold uppercase tracking-widest">Branding</span>
+</div>
+</div>
+<h4 class="text-2xl font-bold text-primary mb-1">Techflow Identity</h4>
+<p class="text-muted-sage">Visual Strategy • 2023</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-soft-off-white py-20">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 border-b border-white/10 pb-20 mb-10">
+<h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight">Ready to start <br/> the flow?</h2>
+<button class="bg-soft-off-white text-primary px-12 py-5 rounded-full text-xl font-bold hover:bg-warm-parchment transition-colors">
+                    Work with us
+                </button>
+</div>
+<div class="flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<span class="text-xl font-bold tracking-tight">flowiee</span>
+</div>
+<p class="text-soft-off-white/60 max-w-[240px]">Sophisticated design and development studio for the next generation.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<p class="font-bold uppercase text-[10px] tracking-widest text-white/40">Studio</p>
+<a class="text-sm hover:text-white/60" href="#">Portfolio</a>
+<a class="text-sm hover:text-white/60" href="#">Services</a>
+<a class="text-sm hover:text-white/60" href="#">Journal</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-bold uppercase text-[10px] tracking-widest text-white/40">Contact</p>
+<a class="text-sm hover:text-white/60" href="#">Email Us</a>
+<a class="text-sm hover:text-white/60" href="#">Instagram</a>
+<a class="text-sm hover:text-white/60" href="#">X (Twitter)</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-bold uppercase text-[10px] tracking-widest text-white/40">Legal</p>
+<a class="text-sm hover:text-white/60" href="#">Privacy Policy</a>
+<a class="text-sm hover:text-white/60" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="mt-20 flex flex-col md:flex-row justify-between text-[10px] font-bold uppercase tracking-widest text-white/20 gap-4">
+<p>© 2024 flowiee studio. All rights reserved.</p>
+<p>Based in New York City &amp; Globally remote.</p>
+</div>
+</div>
+</footer>
+</body></html>
